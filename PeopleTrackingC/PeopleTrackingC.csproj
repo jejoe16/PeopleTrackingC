@@ -72,7 +72,6 @@
     <Compile Include="Position\TurbinePosition.cs" />
     <Compile Include="Position\VesselPosition.cs" />
     <Compile Include="Position\WindTurbine.cs" />
-    <Compile Include="User\IUser.cs" />
     <Compile Include="User\User.cs" />
     <EmbeddedResource Include="Map\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>

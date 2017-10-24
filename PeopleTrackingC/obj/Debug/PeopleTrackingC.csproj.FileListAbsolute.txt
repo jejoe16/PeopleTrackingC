@@ -12,3 +12,15 @@ C:\VS\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.Core.dll
 C:\VS\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.WindowsForms.dll
 C:\VS\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.Core.xml
 C:\VS\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\PeopleTrackingC.exe.config
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\PeopleTrackingC.exe
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\PeopleTrackingC.pdb
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.Core.xml
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.Map.Overview.resources
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.Properties.Resources.resources
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.csproj.GenerateResource.Cache
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.exe
+C:\Users\Chris\Documents\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.pdb
