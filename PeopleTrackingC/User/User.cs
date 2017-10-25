@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PeopleTrackingC.User
 {
-    public class User : IUser
+    public class User 
     {
         private String possition;
         public string GetPossition()
