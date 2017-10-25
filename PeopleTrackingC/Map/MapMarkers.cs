@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PeopleTrackingC.Map
 {
-    class MapControl
+    class MapMarkers
     {
 
-      
+
 
     }
 }

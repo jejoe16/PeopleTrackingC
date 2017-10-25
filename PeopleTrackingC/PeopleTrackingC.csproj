@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Check\ICheck.cs" />
     <Compile Include="Map\MapControl.cs" />
+    <Compile Include="Map\MapMarkers.cs" />
     <Compile Include="Map\Overview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +86,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,5 +102,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\vessel.png" />
+    <None Include="Images\wind.png" />
+    <None Include="Resources\vesselDrawing.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

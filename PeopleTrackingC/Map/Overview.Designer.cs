@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace PeopleTrackingC.Map
 {
     partial class Overview
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -20,30 +23,6 @@ namespace PeopleTrackingC.Map
                 components.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            
-            gmap.MapProvider = GMap.NET.MapProviders.OpenStreet4UMapProvider.Instance;
-            
-            
-            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
-            gmap.SetPositionByKeywords("anholt");
-            gmap.MinZoom = 0;
-            gmap.MaxZoom = 50;
-            gmap.Zoom = 10;
-
-
-            GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
-            GMap.NET.WindowsForms.GMapMarker marker =
-                new GMap.NET.WindowsForms.Markers.GMarkerGoogle(
-                    new GMap.NET.PointLatLng(56.716882, 11.549656),
-                    GMap.NET.WindowsForms.Markers.GMarkerGoogleType.blue_pushpin);
-            markers.Markers.Add(marker);
-            gmap.Overlays.Add(markers);
-
         }
 
 
@@ -73,9 +52,9 @@ namespace PeopleTrackingC.Map
             this.gmap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.gmap.Name = "gmap";
             this.gmap.NegativeMode = false;
-            this.gmap.PolygonsEnabled = true;
+            this.gmap.PolygonsEnabled = false;
             this.gmap.RetryLoadTile = 0;
-            this.gmap.RoutesEnabled = true;
+            this.gmap.RoutesEnabled = false;
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
@@ -91,6 +70,8 @@ namespace PeopleTrackingC.Map
             this.Controls.Add(this.gmap);
             this.Name = "Overview";
             this.Text = "Overview";
+            this.Load += new System.EventHandler(this.Onload);
+            this.Click += new System.EventHandler(this.MouseClickE);
             this.ResumeLayout(false);
 
         }
@@ -99,4 +80,5 @@ namespace PeopleTrackingC.Map
 
         private GMap.NET.WindowsForms.GMapControl gmap;
     }
+
 }
