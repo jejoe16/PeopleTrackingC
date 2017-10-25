@@ -38,8 +38,18 @@
     <Reference Include="GMap.NET.WindowsForms">
       <HintPath>..\..\Release-NETv4.0\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TrackingClient\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TrackingClient\bin\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,13 +62,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Check\Check.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="GuiInterface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GuiInterface.Designer.cs">
+      <DependentUpon>GuiInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="Check\ICheck.cs" />
+    <Compile Include="IO.Swagger\Api\DefaultApi.cs" />
+    <Compile Include="IO.Swagger\Client\ApiClient.cs" />
+    <Compile Include="IO.Swagger\Client\ApiException.cs" />
+    <Compile Include="IO.Swagger\Client\ApiResponse.cs" />
+    <Compile Include="IO.Swagger\Client\Configuration.cs" />
+    <Compile Include="IO.Swagger\Client\ExceptionFactory.cs" />
+    <Compile Include="IO.Swagger\Client\IApiAccessor.cs" />
+    <Compile Include="IO.Swagger\Model\InlineResponse200.cs" />
+    <Compile Include="IO.Swagger\Model\InlineResponse2001.cs" />
+    <Compile Include="IO.Swagger\Model\InlineResponse400.cs" />
+    <Compile Include="IO.Swagger\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="IO.Swagger\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="IO.Swagger\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Map\MapControl.cs" />
     <Compile Include="Map\MapMarkers.cs" />
     <Compile Include="Map\Overview.cs">
@@ -74,6 +97,9 @@
     <Compile Include="Position\VesselPosition.cs" />
     <Compile Include="Position\WindTurbine.cs" />
     <Compile Include="User\User.cs" />
+    <EmbeddedResource Include="GuiInterface.resx">
+      <DependentUpon>GuiInterface.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Map\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +113,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="IO.Swagger\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="IO.Swagger\obj\Debug\IO.Swagger.csproj.CopyComplete" />
+    <None Include="IO.Swagger\obj\Debug\IO.Swagger.csproj.CoreCompileInputs.cache" />
+    <None Include="IO.Swagger\obj\Debug\IO.Swagger.csprojResolveAssemblyReference.cache" />
+    <None Include="IO.Swagger\packages.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,9 +132,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="IO.Swagger\obj\Debug\TempPE\" />
+    <Folder Include="IO.Swagger\Properties\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Images\vessel.png" />
+    <Content Include="IO.Swagger\bin\Debug\IO.Swagger.dll" />
+    <Content Include="IO.Swagger\bin\Debug\IO.Swagger.pdb" />
+    <Content Include="IO.Swagger\bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="IO.Swagger\bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="IO.Swagger\bin\Debug\RestSharp.dll" />
+    <Content Include="IO.Swagger\bin\Debug\RestSharp.xml" />
+    <Content Include="IO.Swagger\IO.Swagger.csproj" />
+    <Content Include="IO.Swagger\obj\Debug\IO.Swagger.csproj.FileListAbsolute.txt" />
+    <Content Include="IO.Swagger\obj\Debug\IO.Swagger.dll" />
+    <Content Include="IO.Swagger\obj\Debug\IO.Swagger.pdb" />
     <None Include="Images\wind.png" />
     <None Include="Resources\vesselDrawing.png" />
   </ItemGroup>

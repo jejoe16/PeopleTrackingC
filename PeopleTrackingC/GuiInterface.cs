@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace PeopleTrackingC
 {
-    public partial class Form1 : Form
+    public partial class GuiInterface : Form
         
     {
         User.User currentUser = new User.User();
         Check.Check checker = new Check.Check();
         String currentPoss = "Some place";
         String defaultPoss = "On the vessel";
-        public Form1()
+        public GuiInterface()
         {
             InitializeComponent();
         }

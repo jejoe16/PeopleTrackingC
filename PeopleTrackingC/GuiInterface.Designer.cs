@@ -1,6 +1,6 @@
 ﻿namespace PeopleTrackingC
 {
-    partial class Form1
+    partial class GuiInterface
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(129, 197);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 71);
             this.button1.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(197, 12);
+            this.button2.Location = new System.Drawing.Point(129, 120);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 71);
             this.button2.TabIndex = 1;
@@ -55,21 +55,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(57, 89);
+            this.textBox1.Location = new System.Drawing.Point(210, 186);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(171, 20);
             this.textBox1.TabIndex = 2;
             // 
-            // Form1
+            // GuiInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "GuiInterface";
+            this.Text = "VesselClient";
             this.ResumeLayout(false);
             this.PerformLayout();
 

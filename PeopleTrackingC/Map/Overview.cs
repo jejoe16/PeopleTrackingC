@@ -52,9 +52,19 @@ namespace PeopleTrackingC.Map
 
         }
 
-        private void MouseClickE(object sender, EventArgs e)
+
+        private void buttonCheckin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonCheckout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
 
         }
     }
