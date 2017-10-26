@@ -8,7 +8,7 @@ namespace PeopleTrackingC.Map
 {
     interface IMap
     {
-
+        void SetTurbineMarkers(List<Position.WindTurbine> turbineList);
 
     }
 }

@@ -92,6 +92,8 @@
     <Compile Include="Map\Overview.Designer.cs">
       <DependentUpon>Overview.cs</DependentUpon>
     </Compile>
+    <Compile Include="Map\TurbineMarker.cs" />
+    <Compile Include="Map\VesselMarker.cs" />
     <Compile Include="Position\ITurbinePosition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

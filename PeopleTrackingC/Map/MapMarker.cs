@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PeopleTrackingC.Map
 {
-    class MapMarker
+    abstract class MapMarker
     {
         private string name;
         private long latitude;
