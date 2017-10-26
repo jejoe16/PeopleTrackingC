@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace PeopleTrackingC.Map
 {
-    class MapMarkers
+    interface IMap
     {
-
 
 
     }

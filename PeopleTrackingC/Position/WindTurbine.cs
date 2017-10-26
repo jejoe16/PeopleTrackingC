@@ -10,34 +10,24 @@ namespace PeopleTrackingC.Position
 
     class WindTurbine
     {
-        private int latitude;
-        private int longitude;
+        private long latitude;
+        private long longitude;
         private string name;
         /// <summary>
         /// Constructor that create an object of a wind turbine
         /// </summary>
         /// <param name="latitude">the latitude of the wind turbines position</param>
         /// <param name="longitude">the longitude of the wind turbines position</param>
-        public WindTurbine(string name, int latitude, int longitude)
+        public WindTurbine(string name, long latitude, long longitude)
         {
             this.latitude = latitude;
             this.longitude = longitude;
             this.name = name;
         }
 
-        public int GetLatitude()
-        {
-            return latitude;
-        }
+        public long GetLatitude { get => latitude; }
+        public long GetLongitude { get => longitude; }
+        public string GetName { get => name; }
 
-        public int GetLongitude()
-        {
-            return longitude;
-        }
-
-        public string GetName()
-        {
-            return name;
-        }
     }
 }

@@ -12,11 +12,11 @@ namespace PeopleTrackingC.Position
     class VesselPosition
     {
 
-        public int GetLatitude()
+        public long GetLatitude()
         {
             return 56716882;
         }
-        public int GetLongitude()
+        public long GetLongitude()
         {
             return 11549656;
         }

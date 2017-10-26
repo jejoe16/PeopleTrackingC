@@ -20,14 +20,8 @@ namespace PeopleTrackingC
         static void Main()
         {
 
-            var apiInstance = new DefaultApi();
-
-
-            InlineResponse2001 result = apiInstance.TurbineGet();
-
-            var latitude = result.Latitude;
-            latitude.IndexOf(0);
-
+            Controller control = new Controller();
+            
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

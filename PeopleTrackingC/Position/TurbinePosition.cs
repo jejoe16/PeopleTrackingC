@@ -10,32 +10,38 @@ namespace PeopleTrackingC.Position
     class TurbinePosition : ITurbinePosition
     {
         private int radius = 100;
-        private ArrayList windturbines = new ArrayList();
+        private List<WindTurbine> windturbines = new List<WindTurbine>();
         private VesselPosition vessel = new VesselPosition();
 
 
-        public void AddTurbine(string name, int latitude,int longitude)
+        public void AddTurbine(string name, long latitude,long longitude)
         {
             WindTurbine wt;
             windturbines.Add(wt = new WindTurbine(name,latitude, longitude));
         }
 
-        public string GetWindTurbine()
+        public string GetNearWindTurbine()
         {
             foreach (WindTurbine wts in windturbines)
             {
-                int lat = vessel.GetLatitude(); // vessel lat 
-                int lon = vessel.GetLongitude(); // vessel long
-                double result = (Math.Pow((lat - wts.GetLatitude()), 2) + Math.Pow((lon - wts.GetLongitude()), 2));
+                long lat = vessel.GetLatitude(); // vessel lat 
+                long lon = vessel.GetLongitude(); // vessel long
+                double result = (Math.Pow((lat - wts.GetLatitude), 2) + Math.Pow((lon - wts.GetLongitude), 2));
 
                 if (result <= Math.Pow(radius, 2))
                 {
-                    return wts.GetName();
+                    return wts.GetName;
                 }
             }
             return null;
-
-
         }
+
+        public List<WindTurbine> GetTurbineList()
+        {
+            return windturbines;
+        }
+
+       
+
     }
 }
