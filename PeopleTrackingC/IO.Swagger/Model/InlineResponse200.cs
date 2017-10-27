@@ -49,28 +49,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineResponse200" /> class.
         /// </summary>
-        /// <param name="Latitude">Latitude (required).</param>
-        /// <param name="Longtitude">Longtitude (required).</param>
+        /// <param name="Position">Position (required).</param>
         /// <param name="IsCaptain">IsCaptain (required).</param>
-        public InlineResponse200(string Latitude = null, string Longtitude = null, bool? IsCaptain = null)
+        public InlineResponse200(string Position = null, bool? IsCaptain = null)
         {
-            // to ensure "Latitude" is required (not null)
-            if (Latitude == null)
+            // to ensure "Position" is required (not null)
+            if (Position == null)
             {
-                throw new InvalidDataException("Latitude is a required property for InlineResponse200 and cannot be null");
+                throw new InvalidDataException("Position is a required property for InlineResponse200 and cannot be null");
             }
             else
             {
-                this.Latitude = Latitude;
-            }
-            // to ensure "Longtitude" is required (not null)
-            if (Longtitude == null)
-            {
-                throw new InvalidDataException("Longtitude is a required property for InlineResponse200 and cannot be null");
-            }
-            else
-            {
-                this.Longtitude = Longtitude;
+                this.Position = Position;
             }
             // to ensure "IsCaptain" is required (not null)
             if (IsCaptain == null)
@@ -84,15 +74,10 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Latitude
+        /// Gets or Sets Position
         /// </summary>
-        [DataMember(Name="latitude", EmitDefaultValue=false)]
-        public string Latitude { get; set; }
-        /// <summary>
-        /// Gets or Sets Longtitude
-        /// </summary>
-        [DataMember(Name="longtitude", EmitDefaultValue=false)]
-        public string Longtitude { get; set; }
+        [DataMember(Name="position", EmitDefaultValue=false)]
+        public string Position { get; set; }
         /// <summary>
         /// Gets or Sets IsCaptain
         /// </summary>
@@ -106,8 +91,7 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InlineResponse200 {\n");
-            sb.Append("  Latitude: ").Append(Latitude).Append("\n");
-            sb.Append("  Longtitude: ").Append(Longtitude).Append("\n");
+            sb.Append("  Position: ").Append(Position).Append("\n");
             sb.Append("  IsCaptain: ").Append(IsCaptain).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -146,14 +130,9 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Latitude == other.Latitude ||
-                    this.Latitude != null &&
-                    this.Latitude.Equals(other.Latitude)
-                ) && 
-                (
-                    this.Longtitude == other.Longtitude ||
-                    this.Longtitude != null &&
-                    this.Longtitude.Equals(other.Longtitude)
+                    this.Position == other.Position ||
+                    this.Position != null &&
+                    this.Position.Equals(other.Position)
                 ) && 
                 (
                     this.IsCaptain == other.IsCaptain ||
@@ -173,10 +152,8 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Latitude != null)
-                    hash = hash * 59 + this.Latitude.GetHashCode();
-                if (this.Longtitude != null)
-                    hash = hash * 59 + this.Longtitude.GetHashCode();
+                if (this.Position != null)
+                    hash = hash * 59 + this.Position.GetHashCode();
                 if (this.IsCaptain != null)
                     hash = hash * 59 + this.IsCaptain.GetHashCode();
                 return hash;

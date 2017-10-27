@@ -39,7 +39,7 @@ namespace PeopleTrackingC
 
 
             var latitude = result.Latitude;
-            var longitude = result.Longtitude;
+            var longitude = result.Longitude;
             var name = result.Name;
 
             for (int i = 0; i < name.Count; i++)
@@ -54,6 +54,19 @@ namespace PeopleTrackingC
             map.SetTurbineMarkers(turbinelist);
         }
 
+        private User.User GetUser(String username, String password)
+        {
+            Boolean capt;
+            var apiInstance = new DefaultApi();
+            InlineResponse200 uResult = apiInstance.GetUserUsernamePasswordGet(username,password);
+            var Position = uResult.Position;
+            var IsCaptain = uResult.IsCaptain;
+            if (uResult.IsCaptain == true) { capt = true; }
+            else { capt = false; }
+            User.User currentUser = new User.User(capt, uResult.Position);
+            return currentUser;
+
+        }
 
     }
 }

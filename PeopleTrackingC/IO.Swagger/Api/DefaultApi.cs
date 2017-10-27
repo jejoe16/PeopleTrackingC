@@ -89,7 +89,7 @@ namespace IO.Swagger.Api
         /// <param name="password"></param>
         /// <param name="location"></param>
         /// <returns></returns>
-        void UpdateLocationUsernamePasswordLocationPost (int? username, int? password, string location);
+        void UpdateLocationUsernamePasswordLocationPost (string username, string password, string location);
 
         /// <summary>
         /// 
@@ -102,7 +102,7 @@ namespace IO.Swagger.Api
         /// <param name="password"></param>
         /// <param name="location"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateLocationUsernamePasswordLocationPostWithHttpInfo (int? username, int? password, string location);
+        ApiResponse<Object> UpdateLocationUsernamePasswordLocationPostWithHttpInfo (string username, string password, string location);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -158,7 +158,7 @@ namespace IO.Swagger.Api
         /// <param name="password"></param>
         /// <param name="location"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateLocationUsernamePasswordLocationPostAsync (int? username, int? password, string location);
+        System.Threading.Tasks.Task UpdateLocationUsernamePasswordLocationPostAsync (string username, string password, string location);
 
         /// <summary>
         /// 
@@ -171,7 +171,7 @@ namespace IO.Swagger.Api
         /// <param name="password"></param>
         /// <param name="location"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateLocationUsernamePasswordLocationPostAsyncWithHttpInfo (int? username, int? password, string location);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateLocationUsernamePasswordLocationPostAsyncWithHttpInfo (string username, string password, string location);
         #endregion Asynchronous Operations
     }
 
@@ -578,7 +578,7 @@ namespace IO.Swagger.Api
         /// <param name="password"></param>
         /// <param name="location"></param>
         /// <returns></returns>
-        public void UpdateLocationUsernamePasswordLocationPost (int? username, int? password, string location)
+        public void UpdateLocationUsernamePasswordLocationPost (string username, string password, string location)
         {
              UpdateLocationUsernamePasswordLocationPostWithHttpInfo(username, password, location);
         }
@@ -591,7 +591,7 @@ namespace IO.Swagger.Api
         /// <param name="password"></param>
         /// <param name="location"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateLocationUsernamePasswordLocationPostWithHttpInfo (int? username, int? password, string location)
+        public ApiResponse<Object> UpdateLocationUsernamePasswordLocationPostWithHttpInfo (string username, string password, string location)
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -660,7 +660,7 @@ namespace IO.Swagger.Api
         /// <param name="password"></param>
         /// <param name="location"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateLocationUsernamePasswordLocationPostAsync (int? username, int? password, string location)
+        public async System.Threading.Tasks.Task UpdateLocationUsernamePasswordLocationPostAsync (string username, string password, string location)
         {
              await UpdateLocationUsernamePasswordLocationPostAsyncWithHttpInfo(username, password, location);
 
@@ -674,7 +674,7 @@ namespace IO.Swagger.Api
         /// <param name="password"></param>
         /// <param name="location"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateLocationUsernamePasswordLocationPostAsyncWithHttpInfo (int? username, int? password, string location)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateLocationUsernamePasswordLocationPostAsyncWithHttpInfo (string username, string password, string location)
         {
             // verify the required parameter 'username' is set
             if (username == null)

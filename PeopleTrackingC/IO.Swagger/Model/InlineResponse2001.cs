@@ -50,9 +50,9 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="InlineResponse2001" /> class.
         /// </summary>
         /// <param name="Latitude">Latitude (required).</param>
-        /// <param name="Longtitude">Longtitude (required).</param>
+        /// <param name="Longitude">Longitude (required).</param>
         /// <param name="Name">Name (required).</param>
-        public InlineResponse2001(List<int?> Latitude = null, List<int?> Longtitude = null, List<string> Name = null)
+        public InlineResponse2001(List<int?> Latitude = null, List<int?> Longitude = null, List<string> Name = null)
         {
             // to ensure "Latitude" is required (not null)
             if (Latitude == null)
@@ -63,14 +63,14 @@ namespace IO.Swagger.Model
             {
                 this.Latitude = Latitude;
             }
-            // to ensure "Longtitude" is required (not null)
-            if (Longtitude == null)
+            // to ensure "Longitude" is required (not null)
+            if (Longitude == null)
             {
-                throw new InvalidDataException("Longtitude is a required property for InlineResponse2001 and cannot be null");
+                throw new InvalidDataException("Longitude is a required property for InlineResponse2001 and cannot be null");
             }
             else
             {
-                this.Longtitude = Longtitude;
+                this.Longitude = Longitude;
             }
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -89,10 +89,10 @@ namespace IO.Swagger.Model
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public List<int?> Latitude { get; set; }
         /// <summary>
-        /// Gets or Sets Longtitude
+        /// Gets or Sets Longitude
         /// </summary>
-        [DataMember(Name="longtitude", EmitDefaultValue=false)]
-        public List<int?> Longtitude { get; set; }
+        [DataMember(Name="longitude", EmitDefaultValue=false)]
+        public List<int?> Longitude { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
@@ -107,7 +107,7 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class InlineResponse2001 {\n");
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
-            sb.Append("  Longtitude: ").Append(Longtitude).Append("\n");
+            sb.Append("  Longitude: ").Append(Longitude).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -151,9 +151,9 @@ namespace IO.Swagger.Model
                     this.Latitude.SequenceEqual(other.Latitude)
                 ) && 
                 (
-                    this.Longtitude == other.Longtitude ||
-                    this.Longtitude != null &&
-                    this.Longtitude.SequenceEqual(other.Longtitude)
+                    this.Longitude == other.Longitude ||
+                    this.Longitude != null &&
+                    this.Longitude.SequenceEqual(other.Longitude)
                 ) && 
                 (
                     this.Name == other.Name ||
@@ -175,8 +175,8 @@ namespace IO.Swagger.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Latitude != null)
                     hash = hash * 59 + this.Latitude.GetHashCode();
-                if (this.Longtitude != null)
-                    hash = hash * 59 + this.Longtitude.GetHashCode();
+                if (this.Longitude != null)
+                    hash = hash * 59 + this.Longitude.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 return hash;

@@ -8,6 +8,13 @@ namespace PeopleTrackingC.User
 {
     public class User 
     {
+        public User(Boolean capt, String poss)
+        {
+            captain = capt;
+            possition = poss;
+        }
+        // indicates wheter or not this specific user should go down with his ship
+        private Boolean captain;
         private String possition;
         public string GetPossition()
         {
@@ -17,6 +24,10 @@ namespace PeopleTrackingC.User
         public void SetPossition(string poss)
         {
            this.possition = poss;
+        }
+        public Boolean getCaptain()
+        {
+            return captain;
         }
     }
 }
