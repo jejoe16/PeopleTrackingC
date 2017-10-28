@@ -28,6 +28,7 @@ namespace PeopleTrackingC
         {
             var apiInstance = new DefaultApi();
             InlineResponse2001 result = apiInstance.TurbineGet();
+            
 
             //List<long> latitude = new List<long>();
             //List<long> longitude = new List<long>();
@@ -39,7 +40,7 @@ namespace PeopleTrackingC
 
 
             var latitude = result.Latitude;
-            var longitude = result.Longtitude;
+            var longitude = result.Longitude;
             var name = result.Name;
 
             for (int i = 0; i < name.Count; i++)
@@ -54,6 +55,16 @@ namespace PeopleTrackingC
             map.SetTurbineMarkers(turbinelist);
         }
 
+        private Workers.User GetUser(String username, String password)
+        {
 
+            var apiInstance = new DefaultApi();
+            InlineResponse200 uResult = apiInstance.GetUserUsernamePasswordGet(username, password);
+            var Position = uResult.Position;
+            Boolean IsCaptain = (Boolean)uResult.IsCaptain;
+            Workers.User currentUser = new Workers.User(IsCaptain, Position);
+            return currentUser;
+
+        }
+        }
     }
-}

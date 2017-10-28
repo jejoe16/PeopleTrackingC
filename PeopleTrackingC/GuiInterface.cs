@@ -13,7 +13,7 @@ namespace PeopleTrackingC
     public partial class GuiInterface : Form
         
     {
-        User.User currentUser = new User.User();
+        Workers.User currentUser = new Workers.User(false,"A1");
         Check.Check checker = new Check.Check();
         String currentPoss = "Some place";
         String defaultPoss = "On the vessel";
