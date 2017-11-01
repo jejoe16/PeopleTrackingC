@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace PeopleTrackingC.Map
         private string name;
         private long latitude;
         private long longitude;
+
 
         public MapMarker(string name, long latitude, long longitude)
         {

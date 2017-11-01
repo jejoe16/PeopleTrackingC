@@ -11,7 +11,7 @@ namespace PeopleTrackingC.Map
 {
     class MapControl : IMap
     {
-        private static List<Object> markers = new List<Object>();
+        private static List<MapMarker> markers = new List<MapMarker>();
 
         public void SetTurbineMarkers(List<Position.WindTurbine> turbineList)
         {
@@ -44,14 +44,6 @@ namespace PeopleTrackingC.Map
             }
 
 
-
-            //foreach (VesselMarker obj in markers)
-            //{
-            //    Bitmap Image = new Bitmap(obj.Image);
-            //    Bitmap resized = new Bitmap(Image, new Size(20, 40));
-            //    GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(obj.Latitude, obj.Longitude), new Bitmap(resized));
-            //    markerListDrawing.Add(marker);
-            //}
             return markerListDrawing;
 
         }

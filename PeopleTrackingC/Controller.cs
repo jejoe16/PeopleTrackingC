@@ -9,17 +9,34 @@ using System.Threading.Tasks;
 
 namespace PeopleTrackingC
 {
-    class Controller
+   public sealed class Controller
     {
+        private static Controller instance = null;
         private Position.ITurbinePosition turbines = new Position.TurbinePosition();
         private Map.IMap map = new Map.MapControl();
 
-        public Controller()
+        /// <summary>
+        /// Singleton method to get the current instance. 
+        /// </summary>
+        public static Controller Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Controller();
+                }
+                return instance;
+            }
+        }
+
+        /// <summary>
+        /// init the code, called when program start.
+        /// </summary>
+        public void Init()
         {
             DownloadTurbines();
             SetWindTurbineMarkers();
-
-
         }
 
         /// <summary>
@@ -50,12 +67,21 @@ namespace PeopleTrackingC
             }
         }
 
+        /// <summary>
+        /// set the turbines on the graphics map
+        /// </summary>
         private void SetWindTurbineMarkers()
         {
             var turbinelist = turbines.GetTurbineList();
             map.SetTurbineMarkers(turbinelist);
         }
 
+        /// <summary>
+        /// Used to get the user 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         private Workers.User GetUser(String username, String password)
         {
 

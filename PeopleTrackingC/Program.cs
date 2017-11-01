@@ -21,6 +21,7 @@ namespace PeopleTrackingC
         {
 
             Controller control = new Controller();
+            control.Init(); // start the code 
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
