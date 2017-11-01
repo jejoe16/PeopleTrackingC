@@ -17,8 +17,7 @@ namespace PeopleTrackingC.Map
 
         private void Onload(object sender, EventArgs e)
         {
-            gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
-
+            gmap.MapProvider = GMap.NET.MapProviders.OpenStreet4UMapProvider.Instance;
 
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
             gmap.SetPositionByKeywords("anholt");

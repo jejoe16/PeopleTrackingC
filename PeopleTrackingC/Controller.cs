@@ -13,6 +13,7 @@ namespace PeopleTrackingC
     {
         private Position.ITurbinePosition turbines = new Position.TurbinePosition();
         private Map.IMap map = new Map.MapControl();
+
         public Controller()
         {
             DownloadTurbines();
