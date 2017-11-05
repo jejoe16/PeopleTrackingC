@@ -13,6 +13,10 @@ namespace PeopleTrackingC.Position
         private List<WindTurbine> windturbines = new List<WindTurbine>();
         private VesselPosition vessel = new VesselPosition();
 
+        public void ShowPosDebugger()
+        {
+            vessel.ShowDebugger();
+        }
 
         public void AddTurbine(string name, long latitude,long longitude)
         {
@@ -24,8 +28,8 @@ namespace PeopleTrackingC.Position
         {
             foreach (WindTurbine wts in windturbines)
             {
-                long lat = vessel.GetLatitude(); // vessel lat 
-                long lon = vessel.GetLongitude(); // vessel long
+                double lat = vessel.GetLatitude(); // vessel lat 
+                double lon = vessel.GetLongitude(); // vessel long
                 double result = (Math.Pow((lat - wts.GetLatitude), 2) + Math.Pow((lon - wts.GetLongitude), 2));
 
                 if (result <= Math.Pow(radius, 2))

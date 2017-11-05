@@ -19,12 +19,12 @@ namespace PeopleTrackingC
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
             Controller control = new Controller();
             control.Init(); // start the code 
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Map.Overview());
 
 

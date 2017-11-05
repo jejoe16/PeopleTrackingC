@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PeopleTrackingC.SimPosition;
 
 namespace PeopleTrackingC.Position
 {
@@ -11,14 +7,25 @@ namespace PeopleTrackingC.Position
     /// </summary>
     class VesselPosition
     {
+        private ISimPosition simulator;
 
-        public long GetLatitude()
+        public VesselPosition()
         {
-            return 56716882;
+            simulator = new SimPosition.SimPosition();
         }
-        public long GetLongitude()
+
+        public void ShowDebugger()
         {
-            return 11549656;
+            simulator.OpenSimPositionGUI();
+        }
+
+        public double GetLatitude()
+        {
+            return simulator.GetLat();
+        }
+        public double GetLongitude()
+        {
+            return simulator.GetLon();
         }
     }
 }

@@ -97,6 +97,14 @@
     <Compile Include="Position\TurbinePosition.cs" />
     <Compile Include="Position\VesselPosition.cs" />
     <Compile Include="Position\WindTurbine.cs" />
+    <Compile Include="SimPositionProgram\GuiSimPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimPositionProgram\GuiSimPos.Designer.cs">
+      <DependentUpon>GuiSimPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimPositionProgram\ISimPosition.cs" />
+    <Compile Include="SimPositionProgram\SimPosition.cs" />
     <Compile Include="Workers\User.cs" />
     <EmbeddedResource Include="GuiInterface.resx">
       <DependentUpon>GuiInterface.cs</DependentUpon>
@@ -114,6 +122,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SimPositionProgram\GuiSimPos.resx">
+      <DependentUpon>GuiSimPos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="IO.Swagger\packages.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

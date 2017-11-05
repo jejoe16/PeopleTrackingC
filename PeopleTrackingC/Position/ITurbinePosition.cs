@@ -30,5 +30,10 @@ namespace PeopleTrackingC.Position
         /// </summary>
         /// <returns>ArrayList with instance of turbines</returns>
         List<WindTurbine> GetTurbineList();
+
+        /// <summary>
+        /// Method to show the location debugger
+        /// </summary>
+        void ShowPosDebugger();
     }
 }

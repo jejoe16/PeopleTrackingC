@@ -1,5 +1,6 @@
 ﻿using IO.Swagger.Api;
 using IO.Swagger.Model;
+using PeopleTrackingC.Workers;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,6 +38,8 @@ namespace PeopleTrackingC
         {
             DownloadTurbines();
             SetWindTurbineMarkers();
+
+            turbines.ShowPosDebugger(); //!!!!!!!!!!!!! this call shoud be added to gui.
         }
 
         /// <summary>
@@ -82,14 +85,14 @@ namespace PeopleTrackingC
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        private Workers.User GetUser(String username, String password)
+        private User GetUser(String username, String password)
         {
 
             var apiInstance = new DefaultApi();
             InlineResponse200 uResult = apiInstance.GetUserUsernamePasswordGet(username, password);
             var Position = uResult.Position;
             Boolean IsCaptain = (Boolean)uResult.IsCaptain;
-            Workers.User currentUser = new Workers.User(IsCaptain, Position);
+            User currentUser = new User(IsCaptain, Position);
             return currentUser;
 
         }
