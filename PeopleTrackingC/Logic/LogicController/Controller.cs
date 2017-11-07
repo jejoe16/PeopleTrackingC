@@ -13,12 +13,22 @@ namespace PeopleTrackingC
     {
         private Position.ITurbinePosition turbines = new Position.TurbinePosition();
         private Map.IMap map = new Map.MapControl();
+        private static Controller controller = null;
+        private DefaultApi api = new DefaultApi();
         public Controller()
         {
             DownloadTurbines();
             SetWindTurbineMarkers();
+        }
 
+        public static Controller GetController()
+        {
+            if (controller == null)
+            {
+                controller = new Controller();
+            }
 
+            return controller;
         }
 
         /// <summary>
@@ -27,7 +37,7 @@ namespace PeopleTrackingC
         private void DownloadTurbines()
         {
             var apiInstance = new DefaultApi();
-            InlineResponse2001 result = apiInstance.TurbineGet();
+            InlineResponse2001 result = api.TurbineGet();
             
 
             //List<long> latitude = new List<long>();

@@ -20,7 +20,7 @@ namespace PeopleTrackingC
         static void Main()
         {
 
-            Controller control = new Controller();
+            Controller control = Controller.GetController();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
