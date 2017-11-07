@@ -26,3 +26,17 @@ C:\VS\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.WindowsForms.xml
 C:\VS\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.exe
 C:\VS\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.pdb
 C:\VS\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.csprojResolveAssemblyReference.cache
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\PeopleTrackingC.exe.config
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\PeopleTrackingC.exe
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\PeopleTrackingC.pdb
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.Core.xml
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.csprojResolveAssemblyReference.cache
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.GuiInterface.resources
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.Map.Overview.resources
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.Properties.Resources.resources
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.csproj.GenerateResource.Cache
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.csproj.CoreCompileInputs.cache
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.exe
+C:\Users\Marcg\OneDrive\Dokumenter\GitHub\PeopleTrackingC\PeopleTrackingC\obj\Debug\PeopleTrackingC.pdb
