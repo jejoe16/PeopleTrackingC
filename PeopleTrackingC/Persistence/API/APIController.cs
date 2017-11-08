@@ -30,44 +30,45 @@ namespace PeopleTrackingC.Persistence.API
             return apicontroller;
         }
 
-        public bool CaptainCheck()
+        public bool? CaptainCheck()
         {
-            throw new NotImplementedException();
+            return response200.IsCaptain;
         }
 
-        public ArrayList GetTurbinesName()
+        public List<String> GetTurbinesName()
         {
-            throw new NotImplementedException();
+            if (response2001 == null)
+            {
+                response2001 = api.TurbineGet();
+            }
+
+            return response2001.Name;
         }
 
-        public ArrayList GetTurbinesLongitude()
+        public List<int?> GetTurbinesLongitude()
         {
-            throw new NotImplementedException();
+            if (response2001 == null)
+            {
+                response2001 = api.TurbineGet();
+            }
+
+            return response2001.Longitude;
         }
 
-        public ArrayList GetTurbinesLatitude()
+        public List<int?> GetTurbinesLatitude()
         {
-            throw new NotImplementedException();
+            if (response2001 == null)
+            {
+                response2001 = api.TurbineGet();
+            }
+
+            return response2001.Latitude;
         }
 
-        public long GetUserLatitude()
-        {
-            throw new NotImplementedException();
-        }
 
-        public long GetUserLongitude()
+        public String GetUserPosition()
         {
-            throw new NotImplementedException();
-        }
-
-        public string GetUserName()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetUserPassWord()
-        {
-            throw new NotImplementedException();
+            return response200.Position;
         }
 
         public void Login(string Username, string Password)

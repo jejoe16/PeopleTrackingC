@@ -1,5 +1,4 @@
-﻿using IO.Swagger.Api;
-using IO.Swagger.Model;
+﻿using PeopleTrackingC.Persistence.API;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,9 +13,10 @@ namespace PeopleTrackingC
         private Position.ITurbinePosition turbines = new Position.TurbinePosition();
         private Map.IMap map = new Map.MapControl();
         private static Controller controller = null;
-        private DefaultApi api = new DefaultApi();
+        private IAPIController api = null;
         public Controller()
         {
+            api = PeopleTrackingC.Persistence.API.APIController.GetAPIController();
             DownloadTurbines();
             SetWindTurbineMarkers();
         }
@@ -36,9 +36,8 @@ namespace PeopleTrackingC
         /// </summary>
         private void DownloadTurbines()
         {
-            var apiInstance = new DefaultApi();
-            InlineResponse2001 result = api.TurbineGet();
-            
+
+
 
             //List<long> latitude = new List<long>();
             //List<long> longitude = new List<long>();
@@ -49,9 +48,9 @@ namespace PeopleTrackingC
             //longitude.Add(11309738159);
 
 
-            var latitude = result.Latitude;
-            var longitude = result.Longitude;
-            var name = result.Name;
+            var latitude = api.GetTurbinesLatitude();
+            var longitude = api.GetTurbinesLongitude();
+            var name = api.GetTurbinesName();
 
             for (int i = 0; i < name.Count; i++)
             {
@@ -67,11 +66,9 @@ namespace PeopleTrackingC
 
         private Workers.User GetUser(String username, String password)
         {
-
-            var apiInstance = new DefaultApi();
-            InlineResponse200 uResult = apiInstance.GetUserUsernamePasswordGet(username, password);
-            var Position = uResult.Position;
-            Boolean IsCaptain = (Boolean)uResult.IsCaptain;
+            api.Login(username, password);
+            var Position = api.GetUserPosition();
+            Boolean IsCaptain = (Boolean)api.CaptainCheck();
             Workers.User currentUser = new Workers.User(IsCaptain, Position);
             return currentUser;
 

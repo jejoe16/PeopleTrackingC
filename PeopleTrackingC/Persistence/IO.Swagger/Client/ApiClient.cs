@@ -60,17 +60,17 @@ namespace IO.Swagger.Client
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default configuration and base path (https://35.195.215.255:12230/TrackServer).
+        /// with default configuration and base path (http://35.195.215.255:12230/TrackServer).
         /// </summary>
         public ApiClient()
         {
             Configuration = Configuration.Default;
-            RestClient = new RestClient("https://35.195.215.255:12230/TrackServer");
+            RestClient = new RestClient("http://35.195.215.255:12230/TrackServer");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (https://35.195.215.255:12230/TrackServer).
+        /// with default base path (http://35.195.215.255:12230/TrackServer).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config = null)
@@ -80,7 +80,7 @@ namespace IO.Swagger.Client
             else
                 Configuration = config;
 
-            RestClient = new RestClient("https://35.195.215.255:12230/TrackServer");
+            RestClient = new RestClient("http://35.195.215.255:12230/TrackServer");
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace IO.Swagger.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://35.195.215.255:12230/TrackServer")
+        public ApiClient(String basePath = "http://35.195.215.255:12230/TrackServer")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

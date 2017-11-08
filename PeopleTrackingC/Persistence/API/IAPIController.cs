@@ -9,14 +9,11 @@ namespace PeopleTrackingC.Persistence.API
 {
     interface IAPIController
     {
-        ArrayList GetTurbinesName();
-        ArrayList GetTurbinesLongitude();
-        ArrayList GetTurbinesLatitude();
+        List<String> GetTurbinesName();
+        List<int?> GetTurbinesLongitude();
+        List<int?> GetTurbinesLatitude();
         void Login(String UserName, String PassWord);
-        long GetUserLatitude();
-        long GetUserLongitude();
-        String GetUserName();
-        String GetUserPassWord();
-        Boolean CaptainCheck();
+        String GetUserPosition();
+        bool? CaptainCheck();
     }
 }
