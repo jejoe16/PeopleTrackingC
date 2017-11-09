@@ -62,6 +62,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\LogicController\IController.cs" />
+    <Compile Include="Logic\Login\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logic\Login\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Login\ILogin.cs" />
+    <Compile Include="Logic\Login\Login.cs" />
+    <Compile Include="Logic\Login\Session.cs" />
     <Compile Include="Persistence\API\APIController.cs" />
     <Compile Include="Persistence\API\IAPIController.cs" />
     <Compile Include="Test\Check.cs" />
@@ -133,7 +142,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\" />
     <Folder Include="Persistence\IO.Swagger\Properties\" />
   </ItemGroup>
   <ItemGroup>

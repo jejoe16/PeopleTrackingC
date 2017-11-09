@@ -14,6 +14,7 @@ namespace PeopleTrackingC
         private Map.IMap map = new Map.MapControl();
         private static Controller controller = null;
         private IAPIController api = null;
+        private Workers.User currentUser;
         public Controller()
         {
             api = PeopleTrackingC.Persistence.API.APIController.GetAPIController();
@@ -36,18 +37,6 @@ namespace PeopleTrackingC
         /// </summary>
         private void DownloadTurbines()
         {
-
-
-
-            //List<long> latitude = new List<long>();
-            //List<long> longitude = new List<long>();
-            //List<String> name = new List<String>();
-
-            //name.Add("A1");
-            //latitude.Add(56572061873);
-            //longitude.Add(11309738159);
-
-
             var latitude = api.GetTurbinesLatitude();
             var longitude = api.GetTurbinesLongitude();
             var name = api.GetTurbinesName();
@@ -64,14 +53,16 @@ namespace PeopleTrackingC
             map.SetTurbineMarkers(turbinelist);
         }
 
-        private Workers.User GetUser(String username, String password)
+        private Boolean  Login(String username, String password)
         {
-            api.Login(username, password);
-            var Position = api.GetUserPosition();
-            Boolean IsCaptain = (Boolean)api.CaptainCheck();
-            Workers.User currentUser = new Workers.User(IsCaptain, Position);
-            return currentUser;
-
-        }
+            Boolean check = api.Login(username, password);
+            if (check == true)
+            {
+                var Position = api.GetUserPosition();
+                Boolean IsCaptain = (Boolean)api.CaptainCheck();
+                currentUser = new Workers.User(IsCaptain, Position, username, password);
+            }
+            return check;
         }
     }
+}

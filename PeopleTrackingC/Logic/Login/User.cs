@@ -8,26 +8,21 @@ namespace PeopleTrackingC.Workers
 {
     public class User
     {
-        public User(Boolean capt, String poss)
+        public User(Boolean capt, String pos, String username, String pw)
         {
             captain = capt;
-            possition = poss;
+            Position = pos;
+            Username = Username;
+            Password = pw;
         }
         // indicates wheter or not this specific user should go down with his ship
-        private Boolean captain;
-        private String possition;
+        private Boolean captain { get; set; }
+        private String Position { get; set; }
+        private String Username { get; set; }
+        private String Password { get; set; }
 
         public bool Captain { get => captain; }
 
-        public string GetPossition()
-        {
-            return possition;
-        }
-
-        public void SetPossition(string poss)
-        {
-            this.possition = poss;
-        }
-
+       
     }
 }

@@ -12,7 +12,7 @@ namespace PeopleTrackingC.Persistence.API
         List<String> GetTurbinesName();
         List<int?> GetTurbinesLongitude();
         List<int?> GetTurbinesLatitude();
-        void Login(String UserName, String PassWord);
+        Boolean Login(String UserName, String PassWord);
         String GetUserPosition();
         bool? CaptainCheck();
     }

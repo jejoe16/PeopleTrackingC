@@ -71,9 +71,18 @@ namespace PeopleTrackingC.Persistence.API
             return response200.Position;
         }
 
-        public void Login(string Username, string Password)
+        public Boolean Login(string Username, string Password)
         {
             response200 = api.GetUserUsernamePasswordGet(Username, Password);
+            if (response200.Position == null)
+            {
+                return false;
+            }
+            else
+                return true;
+            {
+
+            }
         }
     }
 }
