@@ -109,7 +109,7 @@
     <Compile Include="Logic\Position\TurbinePosition.cs" />
     <Compile Include="Logic\Position\VesselPosition.cs" />
     <Compile Include="Logic\Position\WindTurbine.cs" />
-    <Compile Include="Logic\Workers\User.cs" />
+    <Compile Include="Logic\Login\User.cs" />
     <EmbeddedResource Include="GuiInterface.resx">
       <DependentUpon>GuiInterface.cs</DependentUpon>
     </EmbeddedResource>

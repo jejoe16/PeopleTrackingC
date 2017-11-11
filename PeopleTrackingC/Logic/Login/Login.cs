@@ -8,10 +8,10 @@ namespace PeopleTrackingC.Logic.Login
 {
     class Login : ILogin
     {
-        
-        bool ILogin.Login(string username, string password)
+        Workers.User CurrentUser = null;
+        bool ILogin.Login(string username, string password, Boolean isCaptain, string Location)
         {
-            throw new NotImplementedException();
+            currentUser = new Workers.User(IsCaptain, Position, username, password);
         }
     }
 }

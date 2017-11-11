@@ -1,4 +1,5 @@
-﻿using PeopleTrackingC.Persistence.API;
+﻿using PeopleTrackingC.Logic.Login;
+using PeopleTrackingC.Persistence.API;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace PeopleTrackingC
         private Map.IMap map = new Map.MapControl();
         private static Controller controller = null;
         private IAPIController api = null;
-        private Workers.User currentUser;
+        private ILogin session = new Login();
         public Controller()
         {
             api = PeopleTrackingC.Persistence.API.APIController.GetAPIController();
@@ -53,14 +54,14 @@ namespace PeopleTrackingC
             map.SetTurbineMarkers(turbinelist);
         }
 
-        private Boolean  Login(String username, String password)
+        private Boolean Login(String username, String password)
         {
             Boolean check = api.Login(username, password);
             if (check == true)
             {
                 var Position = api.GetUserPosition();
                 Boolean IsCaptain = (Boolean)api.CaptainCheck();
-                currentUser = new Workers.User(IsCaptain, Position, username, password);
+                
             }
             return check;
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PeopleTrackingC.Workers
+namespace PeopleTrackingC.Login
 {
     public class User
     {

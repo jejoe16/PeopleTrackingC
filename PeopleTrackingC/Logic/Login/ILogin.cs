@@ -8,7 +8,7 @@ namespace PeopleTrackingC.Logic.Login
 {
     interface ILogin
     {
-        Boolean Login(String username, String password);
+        Boolean Login(String username, String password, Boolean isCaptain, string Location);
 
     }
 }
